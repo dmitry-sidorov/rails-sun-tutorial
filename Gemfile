@@ -17,6 +17,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rubocop'
   gem 'pry-rails'
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
