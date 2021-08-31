@@ -1,7 +1,11 @@
-<!-- <ul>
-  <% @items.each do |item| %>
-    <li>
-      <%= "name: #{item.name}, description: #{item.description}" %>
-    </li>
-  <% end %>
-</ul> -->
+<h2 style="color: #B00100; margin: 0 auto">All items</h2>
+
+<% @items.each do |item| %>
+  <ul>
+    <li># <%= item.id %></li>
+    <li>Name: <%= link_to item.name, item %></li>
+    <li>Price: <%= item.price %> $</li>
+    <li>Description: <%= item.description %></li>
+    <li>Weight: <%= item.weight %></li>
+  </ul>
+<% end %>

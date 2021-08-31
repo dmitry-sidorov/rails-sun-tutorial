@@ -4,8 +4,6 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
-
-    render json: @items
   end
 
   def create
@@ -15,6 +13,30 @@ class ItemsController < ApplicationController
     else
       redner json: item.errors, status: :unprocessable_entity
     end
+  end
+
+  def new
+    
+  end
+
+  def show
+    begin
+      @item = Item.find_by!(id: params[:id])
+    rescue ActiveRecord::RecordNotFound
+      render body: "Page not found", status: 404
+    end
+  end
+
+  def edit
+    
+  end
+
+  def update
+    
+  end
+
+  def destroy
+    
   end
 
   private
