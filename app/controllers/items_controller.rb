@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
   def create
     item = Item.create(items_params)
     if item.persisted?
-      render json: item, status: :created
+      redirect_to items_path
     else
       render json: item.errors, status: :unprocessable_entity
     end
