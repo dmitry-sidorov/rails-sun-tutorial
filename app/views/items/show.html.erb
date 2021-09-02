@@ -7,3 +7,10 @@
   <li>Description: <%= @item.description %></li>
   <li>Weight: <%= @item.weight %></li>
 </ul>
+
+<br />
+
+<p>Links:</p>
+<%= link_to "Edit #{@item.name}", edit_item_path %><br />
+<%= button_to "Delete #{@item.name}", item_path(@item), method: :delete %><br />
+<%= link_to "Index", edit_item_path %><br />
