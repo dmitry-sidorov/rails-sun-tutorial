@@ -7,5 +7,6 @@
     <li>Price: <%= item.price %> $</li>
     <li>Description: <%= item.description %></li>
     <li>Weight: <%= item.weight %></li>
+    <li><%= button_to "delete", item_path(item), method: :delete %></li>
   </ul>
 <% end %>
